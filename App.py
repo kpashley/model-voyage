@@ -62,7 +62,7 @@ def main():
 
         # Additional text in the output
         st.subheader("Smart Suggestion")
-        st.write("Based on selected Voyage Start Date and Cargo Qty, here are the ships which are available with above details - Stolt Maple, Stolt Palm.")
+        st.write("Based on selected Voyage Start Date and Cargo Qty, here are the ships which are available with above details - Stolt Maple, Stolt Palm. Stolt Maple is in Houston, Stolt Palm is in Continent")
 
 if __name__ == "__main__":
     main()
