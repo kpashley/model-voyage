@@ -1,9 +1,5 @@
 import streamlit as st
 import random
-import joblib
-
-# Load the pre-trained Random Forest model
-model = joblib.load("random_forest_model.pkl")
 
 def calculate(start_region, end_region, charterer, cargo_qty, voyage_start_date):
     # Generate random values for TCE, Voyage Days, and Ballast Days
