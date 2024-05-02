@@ -55,12 +55,12 @@ def main():
             st.write("End Region:", result["End Region"])
             st.write("Charterer:", result["Charterer"])
             st.write("Voyage Start Date:", result["Voyage Start Date"])
+            
+        with col2:
             st.write("Quantity of Cargo:", result["Quantity of Cargo"])
             st.write("Voyage Days:", result["Voyage Days"])
             st.write("TCE:", result["TCE"])
             st.write("Ballast Days:", result["Ballast Days"])
-        with col2:
-            pass  # Placeholder to maintain layout
         
         # Display cards side by side
         st.subheader("Available Ships")
@@ -76,7 +76,7 @@ def main():
             st.write(f"- TCE: {tce_maple}")
             st.write(f"- Ballast Days: {ballast_days_maple}")
             st.write(f"- Voyage Days: {voyage_days_maple}")
-            st.write(f"- Arrival Date: {arrival_date_maple.strftime('%d-%m-%Y')}")
+            st.write(f"- Arrival Date: {arrival_date_maple.strftime('%Y-%m-%d')}")
 
         with col4:
             # Adjustments for Stolt Palm
@@ -89,7 +89,7 @@ def main():
             st.write(f"- TCE: {tce_palm}")
             st.write(f"- Ballast Days: {ballast_days_palm}")
             st.write(f"- Voyage Days: {voyage_days_palm}")
-            st.write(f"- Arrival Date: {arrival_date_palm.strftime('%d-%m-%Y')}")
+            st.write(f"- Arrival Date: {arrival_date_palm.strftime('%Y-%m-%d')}")
 
         # Additional text in the output
         st.subheader("Smart Suggestion")
