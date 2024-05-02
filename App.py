@@ -36,7 +36,7 @@ def main():
     charterer = st.selectbox("Select Charterer:", charterer_options)
 
     # Numeric input for quantity of cargo
-    cargo_qty = st.number_input("Enter Quantity of Cargo:", min_value=0)
+    cargo_qty = st.number_input("Enter Quantity of Cargo:", min_value=10000)
 
     # Date input for voyage start date
     voyage_start_date = st.date_input("Select Voyage Start Date:")
@@ -62,8 +62,23 @@ def main():
 
         # Additional text in the output
         st.subheader("Smart Suggestion")
-        st.write("Based on selected Voyage Start Date and Cargo Qty, here are the ships which are available with above details - Stolt Maple, Stolt Palm. Stolt Maple is in Houston, Stolt Palm is in Continent")
+        st.write("Based on selected Voyage Start Date and Cargo Qty, here are the ships which are available with above details:")
+        
+        # Display cards side by side
+        col3, col4 = st.columns(2)
+        with col3:
+            st.subheader("Stolt Maple")
+            st.write("- TCE: 10200")
+            st.write("- Ballast Days: 5")
+            st.write("- Voyage Days: 35")
+            st.write("- Arrival Date: 25-05-2024")
+        
+        with col4:
+            st.subheader("Stolt Palm")
+            st.write("- TCE: 11200")
+            st.write("- Ballast Days: 3")
+            st.write("- Voyage Days: 31")
+            st.write("- Arrival Date: 22-05-2024")
 
 if __name__ == "__main__":
     main()
-
